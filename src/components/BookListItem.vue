@@ -19,7 +19,6 @@
   .item {
     width: 100%;
     height: 100%;
-    margin: 0 5px;
 
     &__image img {
       width: 100%;

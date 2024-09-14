@@ -6,13 +6,77 @@
         span Xem thêm
         FontAwesomeIcon(:icon='faAngleRight')
     .block-finished_list
-      BookListInDetail
+      BookListInDetail(:items='items')
 </template>
 
 <script setup>
   import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
   import BookListInDetail from './BookListInDetail.vue';
+
+  //fetch data of top 6 books
+  const items = [
+    {
+      id: 1,
+      image: 'https://nae.vn/ttv/ttv/public/images/story/b574c544335443cc763f3702d598d50b96124d4ea630dd4bfbad677c68892090.jpg',
+      title: 'Trận Vấn Trường Sinh',
+      category: 'Tiên Hiệp',
+      author: 'Quan Hư',
+      totalView: 153408,
+      totalChapter: 830,
+      status: 'Chưa hoàn thành',
+    },
+    {
+      id: 2,
+      image: 'https://nae.vn/ttv/ttv/public/images/story/877d54f5b01cedf5da631af873e80e3af9cf4f32fb09c8d6237f7193ccf8dacf.jpg',
+      title: '[Dịch] Kiếm Lai - Tàng Thư Viện',
+      category: 'Tiên Hiệp',
+      author: 'Phong Hỏa Hí Chư Hầu',
+      totalView: 1094187,
+      totalChapter: 434,
+      status: 'Chưa hoàn thành',
+    },
+    {
+      id: 3,
+      image: 'https://nae.vn/ttv/ttv/public/images/story/99d2aa117de6f54b06b64cbbebef2b435336977dfee71f2ee5766d48b31734f3.jpg',
+      title: 'Luân Hồi Lạc Viên',
+      category: 'Đồng Nhân',
+      author: 'Na Nhất Chích Văn Tử ',
+      totalView: 3720923,
+      totalChapter: 4206,
+      status: 'Chưa hoàn thành',
+    },
+    {
+      id: 4,
+      image: 'https://nae.vn/ttv/ttv/public/images/story/f7cd2067ca3da64d4a9e6b1545d2b5c23b1f55aaf8f353a2958fc9bf466b28b2.jpg',
+      title: 'Vô Thượng Thiên Tôn',
+      category: 'Huyền Huyễn',
+      author: 'Khai Hoang ',
+      totalView: 146045,
+      totalChapter: 272,
+      status: 'Chưa hoàn thành',
+    },
+    {
+      id: 5,
+      image: 'https://nae.vn/ttv/ttv/public/images/story/6e839eb1100bc58db13f065420c2cbce3c1840ab6881fe979dbf5e7e4a483724.jpg',
+      title: 'Tinh Không Chức Nghiệp Giả',
+      category: 'Khoa Huyễn',
+      author: 'Văn Sao Công',
+      totalView: 65006,
+      totalChapter: 186,
+      status: 'Chưa hoàn thành',
+    },
+    {
+      id: 6,
+      image: 'https://nae.vn/ttv/ttv/public/images/story/6e839eb1100bc58db13f065420c2cbce3c1840ab6881fe979dbf5e7e4a483724.jpg',
+      title: 'Tinh Không Chức Nghiệp Giả',
+      category: 'Khoa Huyễn',
+      author: 'Văn Sao Công',
+      totalView: 65006,
+      totalChapter: 186,
+      status: 'Chưa hoàn thành',
+    }
+  ]
 </script>
 
 <style lang="scss" scoped>
@@ -50,20 +114,16 @@
     &__title::before {
       content: '';
       display: inline-block;
-      width: .6rem;
+      width: .75rem;
       height: 1.5em;
       vertical-align: middle;
       color: transparent;
-      border-left: 2px solid #ed424b;
+      border-left: .2rem solid #ed424b;
     }
 
     &__more * {
       font-size: 14px;
       font-weight: 700;
-    }
-
-    &__more:hover {
-      color: #ed424b;
     }
 
     /*Ipad dọc(768 x 1024)*/

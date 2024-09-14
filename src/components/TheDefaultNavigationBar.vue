@@ -51,5 +51,29 @@
       height: 30px;
       margin: 0 auto;
     }
+
+    @media (min-width: 768px) {
+      &__item span {
+        font-size: 18px;
+      }
+
+      &__item-icon {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      &__item span {
+        font-size: 24px;
+      }
+
+      &__item-icon {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    @media (min-width: 1200px) {}
   }
 </style>

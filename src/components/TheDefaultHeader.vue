@@ -33,14 +33,16 @@
 
 <style lang="scss" scoped>
   .header {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
     width: 100%;
     padding: 12px;
 
     &__logo {
+      display: inline-flex;
+      align-items: center;
       order: 1;
       font-weight: 500;
       cursor: pointer;
@@ -74,7 +76,6 @@
     &__side {
       flex: 1;
       display: inline-flex;
-      align-items: center;
       justify-content: flex-end;
       order: 3;
     }
@@ -95,41 +96,44 @@
     }
 
     &__account {
+      display: flex;
+      align-items: center;
       color: #ed424b;
     }
 
     &__search {
-      flex: 1;
       order: 4;
+      grid-column: 1 / 4;
     }
 
     /*Ipad dọc(768 x 1024)*/
     @media (min-width: 768px) {
-      &__forum {
-        order: 3;
+      padding: 18px;
+
+      &__logo span {
+        font-size: 30px;
       }
 
-      &__side {
-        flex: 0;
-        order: 4;
+      &__app,
+      &__forum,
+      &__account {
+        font-size: 24px
       }
 
       &__search {
-        flex: 1;
-        margin: 0 30px;
-        order: 2;
+        margin: 0;
         border: 1px solid #dbdbdb;
-        padding: 0 0 0 11px;
       }
     }
 
     /*Ipad ngang(1024 x 768)*/
     @media (min-width: 1024px) {
+      row-gap: 30px;
 
       &__app,
       &__forum,
       &__account {
-        font-size: 20px
+        font-size: 30px
       }
 
       &__logo span {
@@ -138,15 +142,11 @@
 
       &__logo-image {
         display: inline-block;
+        height: 70px;
       }
     }
 
-    @media (min-width: 1200px) {
-
-      &__forum {
-        padding: 6px 12px;
-      }
-    }
+    @media (min-width: 1200px) {}
   }
 
 </style>

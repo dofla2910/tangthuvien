@@ -39,8 +39,30 @@
       padding: 5px 0;
       text-align: center;
       color: #969ba3;
-      margin-top: -20px;
+      margin-top: -2%;
     }
+
+    @media (min-width: 768px) {
+      &__link {
+        font-size: 24px;
+      }
+
+      &__copyright {
+        font-size: 20px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      &__link {
+        font-size: 30px;
+      }
+
+      &__copyright {
+        font-size: 26px;
+      }
+    }
+
+    @media (min-width: 1200px) {}
   }
 
 </style>

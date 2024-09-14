@@ -45,9 +45,16 @@
 
     /*Ipad dọc(768 x 1024)*/
     @media (min-width: 768px) {
+
+      &__input {
+        font-size: 24px;
+        height: 48px;
+        padding-left: 20px;
+      }
+
       &__button {
-        height: 40px;
-        width: 40px;
+        height: 100%;
+        aspect-ratio: 1 / 1;
         color: #fff;
         font-size: 25px;
         line-height: 1;
@@ -58,6 +65,13 @@
 
 
     /*Ipad ngang(1024 x 768)*/
-    @media (min-width: 1024px) {}
+    @media (min-width: 1024px) {
+
+      &__input {
+        font-size: 30px;
+        height: 80px;
+        padding-left: 20px;
+      }
+    }
   }
 </style>
